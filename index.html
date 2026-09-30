@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Interview HR - Recruitment 2026</title>
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #FAF3EB !important; }
+    .card-bg { background-color: #FEDCDB; }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex items-center justify-center p-4 relative">
+
+  <div class="max-w-xl w-full card-bg text-slate-800 rounded-3xl shadow-xl border border-rose-200 overflow-hidden p-8 sm:p-10 relative">
+
+    <div class="relative z-10">
+      <!-- Header Dashboard -->
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/60 text-rose-700 text-xs font-semibold border border-rose-200 shadow-sm mb-4">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5 text-rose-600"></i> Recruitment 2026
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">DASHBOARD INTERVIEW HR</h1>
+        <p class="text-slate-700 text-sm mt-2">Silakan pilih penanggung jawab HR di bawah ini untuk mengakses dashboard.</p>
+      </div>
+
+      <!-- Pilihan Tombol HR -->
+      <div class="space-y-4">
+        
+        <!-- Tombol Fadia Naila Tyas Djatmika -->
+        <button onclick="openModal('Fadia', 'fadia.html')" class="w-full text-left group flex items-center justify-between p-5 rounded-2xl border border-rose-300 hover:border-rose-500 bg-white/80 hover:bg-white transition-all shadow-sm hover:shadow-md cursor-pointer">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-rose-200 text-rose-700 flex items-center justify-center font-bold text-lg border border-rose-300 group-hover:bg-rose-600 group-hover:text-white transition">
+              FD
+            </div>
+            <div>
+              <h2 class="font-bold text-slate-900 group-hover:text-rose-600 transition text-base">Fadia Naila Tyas Djatmika</h2>
+              <p class="text-xs text-slate-500">HR Recruitment Team • Jadwal & Portal Kandidat</p>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-rose-100 group-hover:bg-rose-600 group-hover:text-white text-rose-700 transition">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </div>
+        </button>
+
+        <!-- Tombol Zalfa Nadhira Putri Hendrawan -->
+        <button onclick="openModal('Zalfa', 'zalfa.html')" class="w-full text-left group flex items-center justify-between p-5 rounded-2xl border border-rose-300 hover:border-rose-500 bg-white/80 hover:bg-white transition-all shadow-sm hover:shadow-md cursor-pointer">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-rose-200 text-rose-700 flex items-center justify-center font-bold text-lg border border-rose-300 group-hover:bg-rose-600 group-hover:text-white transition">
+              ZL
+            </div>
+            <div>
+              <h2 class="font-bold text-slate-900 group-hover:text-rose-600 transition text-base">Zalfa Nadhira Putri Hendrawan</h2>
+              <p class="text-xs text-slate-500">HR Recruitment Team • Jadwal & Portal Kandidat</p>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-rose-100 group-hover:bg-rose-600 group-hover:text-white text-rose-700 transition">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </div>
+        </button>
+
+        <!-- Tombol Tafia Afina Putri -->
+        <button onclick="openModal('Tafia', 'tafia.html')" class="w-full text-left group flex items-center justify-between p-5 rounded-2xl border border-rose-300 hover:border-rose-500 bg-white/80 hover:bg-white transition-all shadow-sm hover:shadow-md cursor-pointer">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-rose-200 text-rose-700 flex items-center justify-center font-bold text-lg border border-rose-300 group-hover:bg-rose-600 group-hover:text-white transition">
+              TF
+            </div>
+            <div>
+              <h2 class="font-bold text-slate-900 group-hover:text-rose-600 transition text-base">Tafia Afina Putri</h2>
+              <p class="text-xs text-slate-500">HR Recruitment Team • Jadwal & Portal Kandidat</p>
+            </div>
+          </div>
+          <div class="p-2 rounded-xl bg-rose-100 group-hover:bg-rose-600 group-hover:text-white text-rose-700 transition">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </div>
+        </button>
+
+      </div>
+
+      <!-- Footer Info -->
+      <div class="mt-8 pt-6 border-t border-rose-200/60 text-center text-xs text-slate-600">
+        &copy; 2026 PT Padepokan Tujuh Sembilan • Recruitment System
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal Login Kustom -->
+  <div id="loginModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-rose-100 relative animate-in fade-in zoom-in duration-200">
+      
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center mx-auto mb-3 font-bold text-lg">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <h3 id="modalTitle" class="text-xl font-bold text-slate-900">Login PIC</h3>
+        <p class="text-xs text-slate-500 mt-1">Masukkan kredensial yang valid untuk mengakses dashboard.</p>
+      </div>
+
+      <form onsubmit="handleLogin(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1.5">Username</label>
+          <input type="text" id="usernameInput" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 text-sm outline-none transition" placeholder="Masukkan username..." />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1.5">Password</label>
+          <input type="password" id="passwordInput" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20 text-sm outline-none transition" placeholder="Masukkan password..." />
+        </div>
+
+        <div id="errorMessage" class="text-xs text-rose-600 font-medium hidden text-center"></div>
+
+        <div class="flex gap-3 pt-2">
+          <button type="button" onclick="closeModal()" class="w-1/2 py-2.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 text-sm font-semibold transition cursor-pointer">
+            Batal
+          </button>
+          <button type="submit" class="w-1/2 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold transition shadow-sm cursor-pointer">
+            Masuk
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    let currentPicName = '';
+    let currentTargetUrl = '';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.lucide) { lucide.createIcons(); }
+    });
+
+    function openModal(name, targetUrl) {
+      currentPicName = name;
+      currentTargetUrl = targetUrl;
+      document.getElementById('modalTitle').innerText = 'Login - ' + name;
+      document.getElementById('usernameInput').value = '';
+      document.getElementById('passwordInput').value = '';
+      document.getElementById('errorMessage').classList.add('hidden');
+      
+      const modal = document.getElementById('loginModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('loginModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      let username = document.getElementById('usernameInput').value.trim();
+      let password = document.getElementById('passwordInput').value.trim();
+      let errorEl = document.getElementById('errorMessage');
+      let valid = false;
+
+      if (currentPicName === 'Fadia') {
+        if (username === "FadiaNaila" && password === "Fadnai-MaganghRecP79") {
+          valid = true;
+        }
+      } else if (currentPicName === 'Zalfa') {
+        if (username === "ZalfaNadhira" && password === "ZalNad-MaganghubRecP79") {
+          valid = true;
+        }
+      } else if (currentPicName === 'Tafia') {
+        if (username === "TafiaafinaP79" && password === "Taf-RecP79") {
+          valid = true;
+        }
+      }
+
+      if (valid) {
+        errorEl.classList.add('hidden');
+        window.location.href = currentTargetUrl;
+      } else {
+        errorEl.innerText = "Username atau Password salah! Silakan coba lagi.";
+        errorEl.classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
